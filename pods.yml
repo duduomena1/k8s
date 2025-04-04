@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: my-pod-web-server
+  labels:
+    apps: my-app
+    tier: front
+    app-type: web
+
+spec:
+  containers: 
+  - name: apache-server
+    image: httpd
