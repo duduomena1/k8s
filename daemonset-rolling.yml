@@ -7,10 +7,7 @@ metadata:
 
 spec:
   updateStrategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 2
-
+    type: OnDelete
   template:
     metadata:
       name: mypod
@@ -20,7 +17,7 @@ spec:
     spec:
       containers:
         - name: my-container-nginx
-          image: nginx
+          image: tomcat
 
   selector:
     matchLabels:
