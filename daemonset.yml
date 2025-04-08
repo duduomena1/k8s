@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata: 
+  name: front-end-ds
+  labels:
+    app: frontend
+
+spec:
+  template:
+    metadata:
+      name: mypod
+      labels:
+        apps: my-app
+        tier: frontend
+    spec:
+      containers:
+        - name: my-container-nginx
+          image: nginx
+      nodeName: minikube-m03
+
+  selector:
+    matchLabels:
+      apps: my-app
