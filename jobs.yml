@@ -5,6 +5,7 @@ metadata:
   name: my-job
 
 spec:
+  completions: 2
   template:
     metadata:
       name: my-job
