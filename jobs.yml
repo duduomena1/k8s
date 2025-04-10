@@ -5,7 +5,10 @@ metadata:
   name: my-job
 
 spec:
-  completions: 2
+  completions: 10
+  completionMode: "Indexed"
+  parallelism: 5
+  activeDeadlineSeconds: 17
   template:
     metadata:
       name: my-job
