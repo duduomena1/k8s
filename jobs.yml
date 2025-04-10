@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: my-job
+
+spec:
+  template:
+    metadata:
+      name: my-job
+    spec:
+      containers:
+        - name: job-container
+          image: busybox
+          command: ["sh", "-c", "for i in 1 2; do echo Luck number $i = $((1+ RANDOM % 70)); done"]
+      restartPolicy: Never
+
