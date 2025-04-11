@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+
+metadata:
+  name: my-cronjob
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+         containers:
+          - name: job-container
+            image: busybox
+            command: [ "sh", "-c", "for i in 1 2; do echo Luck number $i = $((1+ RANDOM % 70)); done" ]
+         restartPolicy: Never
+
+
+
+
