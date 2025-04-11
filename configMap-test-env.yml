@@ -4,14 +4,14 @@ metadata:
   name: my-cm
 data:
   #connection DB config
-  database: mongodb
-  database_uri: mongodb://localhost:27017
+  database: "mysql"
+  database_uri: "mysql://localhost:3306"
 
   #user interface
-  font.title: Arial
-  background.color: black
-  theme.1: clean
-  1theme.2: dark
+  font.title: "Arial Bold"
+  background.color: "black"
+  theme.1: "clean"
+  theme.2: "dark"
 
 ---
 
