@@ -4,11 +4,14 @@ kind: CronJob
 metadata:
   name: my-cronjob
 spec:
-  successfulJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: 10
   failedJobsHistoryLimit: 5
   schedule: "* * * * *"
   jobTemplate:
     spec:
+      parallelism: 5
+      completions: 10
+      completionMode: "Indexed"
       template:
         spec:
          containers:
