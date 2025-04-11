@@ -11,14 +11,14 @@ data:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pod-cm-env
+  name: pod-cm
 spec:
   containers:
     - name: my-container
       image: nginx
       envFrom:
         - configMapRef:
-            name: my-cm-env
+            name: my-cm
       command:
         - "bin/sh"
         - "-c"
