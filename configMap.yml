@@ -8,3 +8,4 @@ data:
     database: "mariadb"
     database_uri: "mariadb://localhost:3306"
   test.field: "Hello"
+immutable: true
