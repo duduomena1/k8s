@@ -4,6 +4,8 @@ kind: CronJob
 metadata:
   name: my-cronjob
 spec:
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 5
   schedule: "* * * * *"
   jobTemplate:
     spec:
