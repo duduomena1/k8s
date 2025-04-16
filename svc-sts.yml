@@ -18,7 +18,7 @@ spec:
     matchLabels:
      app: nginx-app-pods
   serviceName: "my-svc"
-  replicas: 5
+  replicas: 3
   template:
     metadata:
       labels:
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: my-ctn
-        image: nginx
+        image: nginx:1.23.1
         volumeMounts:
           - mountPath: /usr/share/nginx/html
             name: my-pv
