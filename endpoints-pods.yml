@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-apache
+spec:
+  containers:
+    - name: apache #10.244.0.155
+      image: httpd
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nginx
+spec:
+  containers:
+    - name: nginx # 10.244.0.154
+      image: nginx
