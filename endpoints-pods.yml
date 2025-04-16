@@ -4,7 +4,7 @@ metadata:
   name: pod-apache
 spec:
   containers:
-    - name: apache #10.244.0.155
+    - name: apache #10.244.0.3
       image: httpd
 ---
 apiVersion: v1
@@ -13,5 +13,5 @@ metadata:
   name: pod-nginx
 spec:
   containers:
-    - name: nginx # 10.244.0.154
+    - name: nginx # 10.244.0.4
       image: nginx
